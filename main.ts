@@ -14,6 +14,9 @@ function Game () {
     basic.showNumber(game.score())
     control.reset()
 }
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showString("HELLO WORLD!")
+})
 function Sparcle () {
     for (let index = 0; index < 2; index++) {
         soundExpression.sad.playUntilDone()
@@ -80,6 +83,8 @@ function Opening () {
     Game()
 }
 function Learn (Learn_num1: number, Learn_num2: number) {
+    My_num1 = 0
+    My_num2 = 0
     basic.clearScreen()
     basic.showNumber(Learn_num1)
     basic.showString("X")
@@ -101,6 +106,9 @@ input.onPinPressed(TouchPin.P1, function () {
 function GG () {
     basic.showIcon(IconNames.SmallHeart)
 }
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    led.setBrightness(101)
+})
 function Health (_375: boolean, _355: boolean) {
     if (input.temperature() >= 35.6 && input.temperature() <= 37.4) {
     	
